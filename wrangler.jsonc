@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "dynamic-workflows-2026",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-01-28",
+  "compatibility_flags": ["experimental"],
+  "worker_loaders": [
+    {
+      "binding": "LOADER"
+    }
+  ],
+  "workflows": [
+    {
+      "name": "dynamic-workflow",
+      "binding": "WORKFLOWS",
+      "class_name": "DynamicWorkflow"
+    }
+  ],
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_classes": ["LogSession"]
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
